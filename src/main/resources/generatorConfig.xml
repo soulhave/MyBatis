@@ -5,37 +5,37 @@
 
 <generatorConfiguration>
 	<classPathEntry
-		location="C:\Users\ramon\.m2\repository\postgresql\postgresql\9.1-901.jdbc4\postgresql-9.1-901.jdbc4.jar" />
+		location="C:\Users\ramon\.m2\repository\mysql\mysql-connector-java\5.1.6\mysql-connector-java-5.1.6.jar" />
 
-	<context id="postgresql" targetRuntime="MyBatis3">
-		<jdbcConnection driverClass="org.postgresql.Driver"
-			connectionURL="jdbc:postgresql://localhost:5432/MyBatis" userId="postgres"
-			password="123" />
+	<context id="mysql" targetRuntime="MyBatis3">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost/mybatis" userId="root"
+			password="root" />
 
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
 
 		<javaModelGenerator targetPackage="br.com.testes.mybatis.model"
-			targetProject="..\java">
+			targetProject="src\main\java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
 		<sqlMapGenerator targetPackage="br.com.testes.mybatis.generated"
-			targetProject="..\java">
+			targetProject="src\main\java\">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 
 		<javaClientGenerator type="ANNOTATEDMAPPER"
-			targetPackage="br.com.testes.mybatis.dao" targetProject="..\java">
-			<property name="enableSubPackages" value="true" />
+			targetPackage="br.com.testes.mybatis.dao" targetProject="src\main\java\">
+				<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-		<table tableName="&quot;Cliente&quot;">
+		<table tableName="Cliente">
 			<property name="useActualColumnNames" value="true" />
 		</table>
-		<table tableName="&quot;Endereco&quot;" schema="public">
+		<table tableName="Endereco" schema="public">
 			<property name="useActualColumnNames" value="true" />
 		</table>
 	</context>

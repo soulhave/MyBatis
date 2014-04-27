@@ -7,9 +7,9 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<mybatis.generator.contexts>postgresql</mybatis.generator.contexts>
+		<mybatis.generator.contexts>mysql</mybatis.generator.contexts>
 		<mybatis.generator.verbose>true</mybatis.generator.verbose>
-		<mybatis.generator.outputDirectory>D:\Ambiente-ControleEntregas\workspace\MyBatis\src\main\java</mybatis.generator.outputDirectory>
+		<mybatis.generator.outputDirectory>${basedir}\src\main\java</mybatis.generator.outputDirectory>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -31,15 +31,25 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.2.7</version>
+		</dependency>
+		<dependency>
 			<groupId>org.mybatis.generator</groupId>
 			<artifactId>mybatis-generator-maven-plugin</artifactId>
 			<version>1.3.2</version>
 			<type>maven-plugin</type>
 		</dependency>
 		<dependency>
-			<groupId>postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>9.1-901.jdbc4</version>
+			<groupId>org.mybatis.generator</groupId>
+			<artifactId>mybatis-generator-maven-plugin</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
 		</dependency>
 	</dependencies>
 	<build>
