@@ -22,12 +22,12 @@
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
-		<sqlMapGenerator targetPackage="br.com.testes.mybatis.generated"
+		<sqlMapGenerator targetPackage="br.com.testes.mybatis.dao"
 			targetProject="src\main\java\">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 
-		<javaClientGenerator type="ANNOTATEDMAPPER"
+		<javaClientGenerator type="XMLMAPPER"
 			targetPackage="br.com.testes.mybatis.dao" targetProject="src\main\java\">
 				<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
